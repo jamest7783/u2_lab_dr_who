@@ -1,4 +1,5 @@
 const DivThree = ( { changeCase, tardis } ) => {
+
     return (
         <div> 
             <h3 onClick={ changeCase }>

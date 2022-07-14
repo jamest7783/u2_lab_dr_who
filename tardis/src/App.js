@@ -1,9 +1,6 @@
 import './App.css';
 import { useState } from 'react'
-import Tardis from './components/Tardis'
 import DivOne from './components/DivOne'
-import DivTwo from './components/DivTwo'
-import DivThree from './components/DivThree'
 
 
 function App() {
@@ -15,8 +12,8 @@ function App() {
     }
   )
   
-  const changeCase = () => {
-    let newTardis = {...tardis}
+  const changeCase = ( oldObj ) => {
+    let newTardis = { ...oldObj }
     if ( tardis.caps ) {
       newTardis.name = tardis.name.toLowerCase() 
       newTardis.caps = false
@@ -31,7 +28,7 @@ function App() {
   
   return (
     <div>
-      <DivOne changeCase={changeCase} tardis={tardis}/>
+      <DivOne changeCase={ changeCase } tardis={ tardis }/>
     </div>
   );
 }
